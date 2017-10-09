@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='author' content='Katarzyna Javaheri-Szpak, Sandra Ilczuk-Kiełczewska'>
+    <meta name='description' content=''>
+    <meta name='keywords' content='paper toilet, papier toaletowy'>
+    <title>Oblicz ile potrzebujesz papierów wartościowych</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel='stylesheet' href='css/style.css'>
+</head>
+
+<body>
+    <div class='container'>
+        <div class='row'>
+            <div class='col-xs-12'>
+                <header>
+                    <h3>Czeka Ciebie małe posiedzenie i martwisz się bo nie wiesz ile potrzebujesz listków papieru?</h3>
+                    <h3>Powiedz nam coś o sobie, a my Tobie pomożemy!</h3>
+                </header>
+                <form name='calculatePaper' id='calculatePaper'>                    
+                    <ol>
+                        <li>
+                            <label for='business' class='label'><p>Jaki jest cel wizyty?</p></label>
+                            <p><input type='radio' name='business' value='jedynka'> jedynka</p>
+                            <p><input type='radio' name='business' value='dwojka'> dwójka</p>
+                            <p><input type='radio' name='business' value='2in1' checked> dwa w jednym</p>
+                        </li>
+                        <li>
+                            <label for='place' class='label'><p>Miejsce załatwienia biznesu.</p></label>
+                            <p><input type='radio' name='place' value='dom' checked> dom</p>
+                            <p><input type='radio' name='place' value='publiczna'> toaleta publiczna (poza domem)</p>
+                        </li>
+                        <li>
+                            <label for='kind' class='label'><p>Rodzaj papieru.</p></label>
+                            <p><input type='radio' name='kind' value='makulaturowy' checked> makulaturowy</p>
+                            <p><input type='radio' name='kind' value='jWarstwowy'> 1-warstwowy</p>
+                            <p><input type='radio' name='kind' value='dWarstwowy'> 2-warstwowy</p>
+                            <p><input type='radio' name='kind' value='tWarstwowy'> 3-warstwowy</p>
+                            <p><input type='radio' name='kind' value='nieznany'> nieznany</p>
+                        </li>
+                        <li>
+                            <label for='time' class='label'><p>Pora dnia</p></label>
+                            <p><input type='radio' name='time' value='rano' checked> rano</p>
+                            <p><input type='radio' name='time' value='popołudnie' checked> popołudnie</p>
+                            <p><input type='radio' name='time' value='wieczor' checked> wieczór</p>
+                            <p><input type='radio' name='time' value='noc' checked> noc</p>
+                        </li>
+                        <li>
+                            <label for='howLong' class='label'><p>Przewidywany czas na biznes podany w miinutach.</p></label>
+                            <input type='number' name='howLong'>
+                        </li>
+                        <li>
+                            <label for='accessories' class='label'><p>Akcesoria towarzyszące</p></label>
+                            <p><input type='checkbox' name='accessories' value='ksizka'> książka</p>
+                            <p><input type='checkbox' name='accessories' value='gazeta'> gazeta</p>
+                            <p><input type='checkbox' name='accessories' value='telefon'> telefon</p>
+                            <p><input type='checkbox' name='accessories' value='tablet'> tablet</p>
+                            <p><input type='checkbox' name='accessories' value='krzySudoku'> krzyżówka/sudoku</p>
+                            <p><input type='checkbox' name='accessories' value='nic'> nic</p>
+                        </li>
+                        <li>
+                            <label for='foodWhen' class='label'><p>Ostatni posiłek został spożyty</p></label>
+                            <p><input type='radio' name='foodWhen' value='1h' checked> mniej niż godzinę temu</p>
+                            <p><input type='radio' name='foodWhen' value='2h'> do 2 godzin temu</p>
+                            <p><input type='radio' name='foodWhen' value='4h'> do 4 godzin temu</p>
+                            <p><input type='radio' name='foodWhen' value='p4h'> ponad 4 godzin temu</p>
+                        </li>
+                        <li>
+                            <label for='foodKind' class='label'><p>Rodzaj ostatniego posiłku</p></label>
+                            <p><input type='radio' name='foodKingd' value='deser' checked> deser</p>
+                            <p><input type='radio' name='foodKingd' value='schab'> schabowy z kapustą</p>
+                            <p><input type='radio' name='foodKingd' value='ryba'> ryba na parze z puree z selera</p>
+                            <p><input type='radio' name='foodKingd' value='pizza'> pizza z papryczkami jalapeno i colą</p>
+                            <p><input type='radio' name='foodKingd' value='owsianka'> owsianka z owocami</p>
+                            <p><input type='radio' name='foodKingd' value='sledz'>  śledz w wędzonych śliwkach z kompotem z suszków</p>
+                        </li>
+                        <li>
+                            <label for='gender' class='label'><p>Płeć</p></label>
+                            <p><input type='radio' name='gender' value='kobieta' checked> kobieta</p>
+                            <p><input type='radio' name='gender' value='mezczyzna'> mężczyzna</p>
+                        </li>
+                        <button class='btn btn-success' onclick='paperFn()'>Spłucz!</button>
+                    </ol>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <script src='js/script.js'></script>
+</body>
+
+</html>
