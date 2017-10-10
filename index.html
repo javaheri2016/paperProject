@@ -1,6 +1,5 @@
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang='PL-pl'>
 <head>
     <meta charset='UTF-8'>
     <meta name='author' content='Katarzyna Javaheri-Szpak, Sandra Ilczuk-Kiełczewska'>
@@ -12,6 +11,7 @@
 </head>
 
 <body>
+    <div id='alertBox'></div>
     <div class='container'>
         <div class='row'>
             <div class='col-xs-12'>
@@ -23,42 +23,42 @@
                     <ol>
                         <li>
                             <label for='business' class='label'><p>Jaki jest cel wizyty?</p></label>
-                            <p><input type='radio' name='business' value='jedynka'> jedynka</p>
-                            <p><input type='radio' name='business' value='dwojka'> dwójka</p>
+                            <p><input type='radio' name='business' value='1'> jedynka</p>
+                            <p><input type='radio' name='business' value='2'> dwójka</p>
                             <p><input type='radio' name='business' value='2in1' checked> dwa w jednym</p>
                         </li>
                         <li>
                             <label for='place' class='label'><p>Miejsce załatwienia biznesu.</p></label>
-                            <p><input type='radio' name='place' value='dom' checked> dom</p>
-                            <p><input type='radio' name='place' value='publiczna'> toaleta publiczna (poza domem)</p>
+                            <p><input type='radio' name='place' value='house' checked> dom</p>
+                            <p><input type='radio' name='place' value='public'> toaleta publiczna (poza domem)</p>
                         </li>
                         <li>
                             <label for='kind' class='label'><p>Rodzaj papieru.</p></label>
-                            <p><input type='radio' name='kind' value='makulaturowy' checked> makulaturowy</p>
-                            <p><input type='radio' name='kind' value='jWarstwowy'> 1-warstwowy</p>
-                            <p><input type='radio' name='kind' value='dWarstwowy'> 2-warstwowy</p>
-                            <p><input type='radio' name='kind' value='tWarstwowy'> 3-warstwowy</p>
-                            <p><input type='radio' name='kind' value='nieznany'> nieznany</p>
+                            <p><input type='radio' name='kind' value='wastepaper' checked> makulaturowy</p>
+                            <p><input type='radio' name='kind' value='1layer'> 1-warstwowy</p>
+                            <p><input type='radio' name='kind' value='2layers'> 2-warstwowy</p>
+                            <p><input type='radio' name='kind' value='3layers'> 3-warstwowy</p>
+                            <p><input type='radio' name='kind' value='none'> nieznany</p>
                         </li>
                         <li>
                             <label for='time' class='label'><p>Pora dnia</p></label>
-                            <p><input type='radio' name='time' value='rano' checked> rano</p>
-                            <p><input type='radio' name='time' value='popołudnie' checked> popołudnie</p>
-                            <p><input type='radio' name='time' value='wieczor' checked> wieczór</p>
-                            <p><input type='radio' name='time' value='noc' checked> noc</p>
+                            <p><input type='radio' name='time' value='morning' checked> rano</p>
+                            <p><input type='radio' name='time' value='afternoon' checked> popołudnie</p>
+                            <p><input type='radio' name='time' value='evening' checked> wieczór</p>
+                            <p><input type='radio' name='time' value='night' checked> noc</p>
                         </li>
                         <li>
-                            <label for='howLong' class='label'><p>Przewidywany czas na biznes podany w miinutach.</p></label>
-                            <input type='number' name='howLong'>
+                            <label for='howLong' class='label'><p>Przewidywany czas na biznes podany w minutach.</p></label>
+                            <input type='number' name='howLong' min='1' max='60' value='1'>
                         </li>
                         <li>
                             <label for='accessories' class='label'><p>Akcesoria towarzyszące</p></label>
-                            <p><input type='checkbox' name='accessories' value='ksizka'> książka</p>
-                            <p><input type='checkbox' name='accessories' value='gazeta'> gazeta</p>
-                            <p><input type='checkbox' name='accessories' value='telefon'> telefon</p>
+                            <p><input type='checkbox' name='accessories' value='book'> książka</p>
+                            <p><input type='checkbox' name='accessories' value='newspaper'> gazeta</p>
+                            <p><input type='checkbox' name='accessories' value='phone'> telefon</p>
                             <p><input type='checkbox' name='accessories' value='tablet'> tablet</p>
-                            <p><input type='checkbox' name='accessories' value='krzySudoku'> krzyżówka/sudoku</p>
-                            <p><input type='checkbox' name='accessories' value='nic'> nic</p>
+                            <p><input type='checkbox' name='accessories' value='crossword'> krzyżówka/sudoku</p>
+                            <p><input type='checkbox' name='accessories' value='nothing'> nic</p>
                         </li>
                         <li>
                             <label for='foodWhen' class='label'><p>Ostatni posiłek został spożyty</p></label>
@@ -69,19 +69,19 @@
                         </li>
                         <li>
                             <label for='foodKind' class='label'><p>Rodzaj ostatniego posiłku</p></label>
-                            <p><input type='radio' name='foodKingd' value='deser' checked> deser</p>
-                            <p><input type='radio' name='foodKingd' value='schab'> schabowy z kapustą</p>
-                            <p><input type='radio' name='foodKingd' value='ryba'> ryba na parze z puree z selera</p>
-                            <p><input type='radio' name='foodKingd' value='pizza'> pizza z papryczkami jalapeno i colą</p>
-                            <p><input type='radio' name='foodKingd' value='owsianka'> owsianka z owocami</p>
-                            <p><input type='radio' name='foodKingd' value='sledz'>  śledz w wędzonych śliwkach z kompotem z suszków</p>
+                            <p><input type='radio' name='foodKind' value='dessert' checked> deser</p>
+                            <p><input type='radio' name='foodKind' value='pork'> schabowy z kapustą</p>
+                            <p><input type='radio' name='foodKind' value='fish'> ryba na parze z puree z selera</p>
+                            <p><input type='radio' name='foodKind' value='pizza'> pizza z papryczkami jalapeno i colą</p>
+                            <p><input type='radio' name='foodKind' value='oat'> owsianka z owocami</p>
+                            <p><input type='radio' name='foodKind' value='herring'>  śledz w wędzonych śliwkach z kompotem z suszków</p>
                         </li>
                         <li>
                             <label for='gender' class='label'><p>Płeć</p></label>
-                            <p><input type='radio' name='gender' value='kobieta' checked> kobieta</p>
-                            <p><input type='radio' name='gender' value='mezczyzna'> mężczyzna</p>
+                            <p><input type='radio' name='gender' value='woman' checked> kobieta</p>
+                            <p><input type='radio' name='gender' value='man'> mężczyzna</p>
                         </li>
-                        <button class='btn btn-success' onclick='paperFn()'>Spłucz!</button>
+                        <input type='button' class='btn btn-success' value='Spłucz!' onclick='paperFn()'>
                     </ol>
                 </form>
             </div>
